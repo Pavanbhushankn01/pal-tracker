@@ -1,18 +1,21 @@
 using Microsoft.AspNetCore.Mvc;
 
+
 namespace PalTracker
 {
-    [Route("env")]
+    [Route("/Env")]
     public class EnvController : ControllerBase
     {
-        private readonly CloudFoundryInfo _cloudFoundryEnv;
-
-        [HttpGet]
-        public CloudFoundryInfo Get() => _cloudFoundryEnv;
-
-        public EnvController(CloudFoundryInfo cloudFoundryEnv)
+        CloudFoundryInfo cloudinfo;
+        public EnvController( CloudFoundryInfo _cloudinfo)
         {
-            _cloudFoundryEnv = cloudFoundryEnv;
+            cloudinfo = _cloudinfo;
+        }
+        
+        [HttpGet]
+        public CloudFoundryInfo Get()
+        {
+            return cloudinfo;
         }
     }
 }

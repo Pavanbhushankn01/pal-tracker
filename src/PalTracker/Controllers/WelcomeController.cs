@@ -5,24 +5,21 @@ namespace PalTracker
     [Route("/")]
     public class WelcomeController : ControllerBase
     {
-        private WelcomeMessage _message {get;set;}
+        WelcomeMessage welcomemsg;
 
-        //[HttpGet]
-        // public string SayHello() => "hello";
-
-        public WelcomeController(WelcomeMessage _message){
-            this._message = _message;
+        public WelcomeController(WelcomeMessage welmsg_arg)
+        {
+            welcomemsg = welmsg_arg;
         }
-
-        [HttpGet]
-        public string Environment(){
-            return _message.Message;
-        }
+        [HttpGet()]
+        public string SayHello() 
+        {
+            /*             
+            System.Diagnostics.Debug.WriteLine("#Request.Path  = " + Request.Path );
+            System.Diagnostics.Debug.WriteLine("#Request.Host  = " + Request.Host);
+            System.Diagnostics.Debug.WriteLine("#Request.Query  = " + Request.Query );
+            */
+            return welcomemsg.message;
+        } 
     }
-
-    
-
-    
-
-    
 }
