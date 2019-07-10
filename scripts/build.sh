@@ -9,6 +9,12 @@ artifacts_path="./artifacts"
 version=$1
 
 mkdir -p $build_output
+echo "-----------"
+echo $1 
+echo $build_output
+echo $artifacts_path
+echo "-----------"
+
 mkdir -p $artifacts_path
 
 cp manifest-*.yml $build_output
