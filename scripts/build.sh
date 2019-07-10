@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 set -ex
 
-DISABLE_AUTH=true dotnet test ./test/PalTrackerTests
+echo "-----------"
+echo $1 
+
+DISABLE_AUTH=true 
+echo `pwd`
+dotnet test ./test/PalTrackerTests
 artifacts_path=/tmp/artifacts
 
 build_output="/tmp/build-output"
