@@ -3,11 +3,12 @@ namespace PalTracker
     
     public class WelcomeMessage
     {
-        public string message ;
+        public string Message {get;set;}
+
 
         public WelcomeMessage( string msg_arg)
         {
-            message = msg_arg;
+            Message = msg_arg;
         }
     }
 }

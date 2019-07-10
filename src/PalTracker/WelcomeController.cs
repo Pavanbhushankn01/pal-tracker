@@ -19,7 +19,7 @@ namespace PalTracker
             System.Diagnostics.Debug.WriteLine("#Request.Host  = " + Request.Host);
             System.Diagnostics.Debug.WriteLine("#Request.Query  = " + Request.Query );
             */
-            return welcomemsg.message;
+            return welcomemsg.Message;
         } 
     }
 }
